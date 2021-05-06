@@ -67,7 +67,6 @@ buck-out/
 
 # Expo
 .expo/*
-bin/Exponent.app
 
 npm-debug.*
 *.jks
@@ -79,5 +78,4 @@ npm-debug.*
 web-build/
 
 # Configurations
-app/config/env.*.js
 !env.js
