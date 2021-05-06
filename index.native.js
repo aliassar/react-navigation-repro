@@ -9,12 +9,7 @@
 // It's easier just to leave it here.
 import App from "./app/app.tsx"
 import { AppRegistry } from "react-native"
-import * as serviceWorkerRegistration from "./web/serviceWorkerRegistration"
-import reportWebVitals from "./web/reportWebVitals"
 
 AppRegistry.registerComponent("web", () => App)
-AppRegistry.runApplication("web", {
-  rootTag: document.getElementById("root"),
-})
-serviceWorkerRegistration.register()
-reportWebVitals()
+
+export default App

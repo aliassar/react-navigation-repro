@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { DevSettings } from "react-native"
 import { loadString, saveString } from "../app/utils/storage"
+import { Platform } from "react-native"
+
+const DevSettings = Platform.select({
+  web: null,
+  default: require('react-native').DevSettings,
+})
 
 /**
  * Toggle Storybook mode, in __DEV__ mode only.
@@ -24,7 +29,7 @@ export function ToggleStorybook(props) {
         setShowStorybook(storedSetting === "on")
 
         // Add our toggle command to the menu
-        DevSettings.addMenuItem("Toggle Storybook", () => {
+        DevSettings && DevSettings.addMenuItem("Toggle Storybook", () => {
           setShowStorybook((show) => {
             // On toggle, flip the current value
             show = !show

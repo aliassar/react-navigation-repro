@@ -1,10 +1,11 @@
 import * as React from "react"
-import { View, Image, ImageStyle } from "react-native"
+import { View, Image, ImageStyle, Platform } from "react-native"
 import { IconProps } from "./icon.props"
 import { icons } from "./icons"
 
 const ROOT: ImageStyle = {
   resizeMode: "contain",
+  ...(Platform.OS === "web" && { width: 16, height: 15 }),
 }
 
 export function Icon(props: IconProps) {
