@@ -1,4 +1,10 @@
-# Welcome to your new ignited app!
+# This is a repro for react navigation failing build 
+
+just use `yarn run web:build` to see it fail 
+`yarn run web` works just fine
+
+
+## Since I used ignite to build this I don't clean its readme
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
 
